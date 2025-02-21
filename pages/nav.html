@@ -1,11 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navbar</title>
-</head>
-<body>
-    <p>Navigation bar</p>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Navbar</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body>
+        <div
+            class="relative flex items-center justify-center p-4 bg-[#390F3D] shadow-md">
+            <div class="flex items-center space-x-2">
+                <img
+                    src="https://res.cloudinary.com/dfczhaomn/image/upload/v1740123939/left-svgrepo-com_dexe3r.svg"
+                    class="w-5 h-5" alt="left-arrow" />
+                <img
+                    src="https://res.cloudinary.com/dfczhaomn/image/upload/v1740123938/right-svgrepo-com_wgwio8.svg"
+                    class="w-5 h-5" alt="right-arrow" />
+                <img
+                    src="https://res.cloudinary.com/dfczhaomn/image/upload/v1740123862/clock-three-svgrepo-com_qjk8oe.svg"
+                    class="w-5 h-5"
+                    alt="clock" />
+            </div>
+
+            <!-- search -->
+            <div class="absolute inset-x-0 flex justify-center">
+                <div class="relative w-2/3">
+                    <input type="text" placeholder="Search My Workspace"
+                        class="w-full p-2 pl-10 text-sm rounded-full bg-[#6F4E73] text-white placeholder-[#D1D2D3] focus:outline-none" />
+                    <div
+                        class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none">
+                        <img
+                            src="https://res.cloudinary.com/dfczhaomn/image/upload/v1740122183/search-svgrepo-com_w1vfhx.svg"
+                            class="img-fluid w-4 h-4" alt="search-icon" />
+                    </div>
+                </div>
+            </div>
+            <!-- Help Icon -->
+            <div class="ml-auto">
+                <img
+                    src="https://res.cloudinary.com/dfczhaomn/image/upload/v1740122812/help-circle-svgrepo-com_f1sgla.svg"
+                    class="img-fluid w-6 h-6" alt="help-icon" />
+            </div>
+        </div>
+    </body>
 </html>
