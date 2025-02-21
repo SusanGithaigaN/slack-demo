@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Slack Clone</title>
+        <link rel="stylesheet" src="./styles.css" />
+        <!-- jQuery -->
+        <script
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <!-- Tailwind css -->
+        <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+            <!-- Custom styles -->
+            <script>
+                tailwind.config = {
+                  theme: {
+                    extend: {
+                      colors: {
+                        accentColor: "#390F3D",
+                        palePurple: "#5F3A63",
+                        paleBlack: "1A1D21#",
+                        softPurple: "#431349",
+                        lightPurple: "#523057",
+                        headerColor: "#D1D2D3",
+                        activeGreen: "#34725F"
+                      },
+                    },
+                  },
+                };
+              </script>
+    </head>
+    <body>
+        <div id="slack-clone" class="p-4">
+            <!-- Render pages -->
+            <div id="navbar"></div>
+            <div class="side"></div>
+            <div id="home"></div>
+        </div>
+    </body>
+</html>
+<!-- JS Scripts to render pages -->
+<script>
+    $(function () {
+        $("#navbar").load("./pages/nav.html");
+        $("#home").load("./pages/home.html");
+        $(".side").load("./pages/sidebar.html");
+    });
+</script>
