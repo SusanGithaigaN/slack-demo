@@ -1,42 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Slack Clone</title>
-        <link rel="stylesheet" src="./styles.css" />
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slack Clone</title>
         <!-- Tailwind css -->
-        <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-        <!-- Custom styles -->
-        <script>
-                tailwind.config = {
-                  theme: {
-                    extend: {
-                      colors: {
-                        accentColor: "#390F3D",
-                        palePurple: "#5F3A63",
-                        paleBlack: "1A1D21#",
-                        softPurple: "#431349",
-                        lightPurple: "#523057",
-                        headerColor: "#D1D2D3",
-                        activeGreen: "#34725F"
-                      },
-                    },
-                  },
-                };
-              </script>
-        <!-- jQuery -->
-        <script
-            src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    </head>
-    <body>
-        <div id="slack-clone" class>
-            <!-- Render pages -->
-            <div id="navbar"></div>
-            <div class="side"></div>
-            <div id="home"></div>
-        </div>
-    </body>
+        <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom classes -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              accentColor: "#390F3D",
+              palePurple: "#5F3A63",
+              paleBlack: "#1A1D21",
+              softPurple: "#431349",
+              lightPurple: "#523057",
+              darkPurple: "#211125",
+              headerColor: "#D1D2D3",
+              activeGreen: "#34725F",
+              hightlightPurple: "#6F4E73",
+            },
+            fontSize: {
+              xsm: '12px',
+            }
+          },
+        },
+      };
+       // Set the initial theme based on localStorage or system preference
+       if (
+        localStorage.getItem('theme') === 'dark' ||
+        (!localStorage.getItem('theme') &&
+          window.matchMedia('(prefers-color-scheme: dark)').matches)
+      ) {
+        document.documentElement.classList.add('dark');
+      }
+    </script>
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="./styles.css" />
+      <!-- jQuery -->
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="slack-clone" class>
+      <!-- Render pages -->
+      <div id="navbar"></div>
+      <div class="grid grid-cols-6 gap-0">
+        <div class="col-span-2 side"></div>
+        <div id="home" class="col-span-4"></div>
+      </div>
+    </div>
+  </body>
 </html>
 <!-- JS Scripts to render pages -->
 <script>
