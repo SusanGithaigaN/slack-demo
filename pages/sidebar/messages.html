@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>msgs</title>
+</head>
+
+<body>
+      <div id="contentWrapper" class="space-y-4 pt-6 text-headerColor h-auto mt-6 transition-all duration-300 ease-in-out">
+        <div class="relative inline-block text-left text-headerColor">
+            <div class="relative w-fit">
+                <button type="button" class="group flex items-center w-full justify-start gap-x-2 py-2 text-sm"
+                    id="mydropdownButton">
+                    <!-- down arrow (always visible) -->
+                    <img class="h-1.5 w-auto" alt="down-arrow" src="https://shorturl.at/wDt0S" />
+                    Direct messages
+                    <!-- chevron (only visible on hover) -->
+                    <img class="h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                        src="https://shorturl.at/qR1BM" alt="chev" />
+                </button>
+            </div>
+
+            <!-- Dropdown content -->
+            <div id="mydropdownMenu"
+                class="absolute hidden left-0 mt-2 w-48 bg-darkGray text-headerColor rounded-lg shadow-lg">
+                <ul class="space-y-4">
+                    <li class="flex flex-row cursor-pointer">
+                        <img class="img-fluid h-6 w-auto pr-2 rounded-md" alt="menu-img" src="https://res.cloudinary.com/dfczhaomn/image/upload/v1740981691/T06MWLGP3D3-U08B5L201MF-9360f2ee58c1-512_xftnth.jpg" />
+                        <span class="font-bold text-md">Saka</span>
+                    </li>
+                    <li class="flex flex-row cursor-pointer">
+                        <img class="img-fluid h-6 w-auto pr-2 rounded-md" alt="menu-img" src="https://res.cloudinary.com/dfczhaomn/image/upload/v1740981691/T06MWLGP3D3-U08B5L201MF-9360f2ee58c1-512_xftnth.jpg" />
+                        <span class="font-bold text-md">Kat</span>
+                    </li>
+                    <li class="flex flex-row cursor-pointer">
+                        <img class="img-fluid h-6 w-auto pr-2 rounded-md" alt="menu-img" src="https://res.cloudinary.com/dfczhaomn/image/upload/v1740981691/T06MWLGP3D3-U08B5L201MF-9360f2ee58c1-512_xftnth.jpg" />
+                        <span class="font-bold text-md">Jeremy</span>
+                    </li>
+                    <li class="flex flex-row cursor-pointer">
+                        <img class="img-fluid h-6 w-auto pr-2 rounded-md" alt="menu-img" src="https://res.cloudinary.com/dfczhaomn/image/upload/v1740981691/T06MWLGP3D3-U08B5L201MF-9360f2ee58c1-512_xftnth.jpg" />
+                        <span class="font-bold text-md">Aurora</span>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        const mydropdownButton = document.getElementById('mydropdownButton');
+        const mydropdownMenu = document.getElementById('mydropdownMenu');
+        mydropdownButton.addEventListener('click', () => {
+            mydropdownMenu.classList.toggle('hidden');
+        });
+        
+    </script>
+</body>
+
+</html>

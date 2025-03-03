@@ -1,64 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slack Clone</title>
-        <!-- Tailwind css -->
-        <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Custom classes -->
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              accentColor: "#390F3D",
-              palePurple: "#5F3A63",
-              paleBlack: "#1A1D21",
-              softPurple: "#431349",
-              lightPurple: "#523057",
-              darkPurple: "#211125",
-              headerColor: "#D1D2D3",
-              activeGreen: "#34725F",
-              hightlightPurple: "#6F4E73",
-            },
-            fontSize: {
-              xsm: '12px',
-            }
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slack Clone</title>
+  <!-- Tailwind css -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Custom classes -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            accentColor: "#390F3D",
+            palePurple: "#5F3A63",
+            paleBlack: "#1A1D21",
+            softPurple: "#431349",
+            lightPurple: "#523057",
+            darkPurple: "#211125",
+            headerColor: "#D1D2D3",
+            activeGreen: "#34725F",
+            accessGreen: "#007A5A",
+            darkGreen: "#004d38",
+            hightlightPurple: "#6F4E73",
+            aubergineLight: "#F8C1FF",
+            highlightBlue: "#1264A3",
           },
+          fontSize: {
+            xsm: '12px',
+          }
         },
-      };
-       // Set the initial theme based on localStorage or system preference
-       if (
-        localStorage.getItem('theme') === 'dark' ||
-        (!localStorage.getItem('theme') &&
-          window.matchMedia('(prefers-color-scheme: dark)').matches)
-      ) {
-        document.documentElement.classList.add('dark');
-      }
-    </script>
-    <!-- Custom styles -->
-    <link rel="stylesheet" href="./styles.css" />
-      <!-- jQuery -->
-    <script
-      src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-  </head>
-  <body>
-    <div id="slack-clone" class>
-      <!-- Render pages -->
-      <div id="navbar"></div>
-      <div class="grid grid-cols-6 gap-0">
-        <div class="col-span-2 side"></div>
-        <div id="home" class="col-span-4"></div>
-      </div>
+      },
+    };
+    // Set the initial theme based on localStorage or system preference
+    if (
+      localStorage.getItem('theme') === 'dark' ||
+      (!localStorage.getItem('theme') &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      document.documentElement.classList.add('dark');
+    }
+  </script>
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+
+<body>
+  <div id="slack-clone">
+    <!-- Render pages -->
+    <div id="navbar"></div>
+    <div class="grid grid-cols-6 gap-0">
+      <div class="col-span-2 side"></div>
+      <div id="home" class="col-span-4"></div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
 <!-- JS Scripts to render pages -->
 <script>
-    $(function () {
-        $("#navbar").load("./pages/nav.html");
-        $("#home").load("./pages/home.html");
-        $(".side").load("./pages/sidebar.html");
+  $(function () {
+    $("#navbar").load("./pages/nav.html");
+    $("#home").load("./pages/home.html", function () {
+      $("#general").load("./pages/channels/general.html");
+      $("#subnav").load("./pages/channels/subnav.html");
+      $("#pro").load("./pages/channels/pro.html");
     });
+    $(".side").load("./pages/sidebar/sidebar.html", function () {
+      $("#messages").load("./pages/sidebar/messages.html");
+      $(".channels").load("./pages/sidebar/channel-dropdown.html");
+    });
+  });
 </script>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar</title>
+</head>
+
+<body>
+    <div class="grid grid-cols-12 gap-0">
+        <!-- Icons -->
+        <div class="col-span-3">
+            <div
+                class="flex flex-col items-center gap-2 bg-accentColor border-0 border-r-1 border-r-palePurple font-semibold h-screen">
+                <div class="py-2 flex flex-col items-center">
+                    <img class="img-fluid h-4 w-auto" alt="menu-img" src="https://shorturl.at/PuFRs" />
+                    <p class="text-xsm text-headerColor py-2">Home</p>
+                </div>
+                <div class="py-2 flex flex-col items-center">
+                    <img class="img-fluid h-4 w-auto" alt="menu-img" src="https://shorturl.at/Zulz9" />
+                    <p class="text-xsm text-headerColor py-2">DMs</p>
+                </div>
+                <div class="py-2 flex flex-col items-center">
+                    <img class="img-fluid h-4 w-auto" alt="menu-img" src="https://shorturl.at/hQwIX" />
+                    <p class="text-xsm text-headerColor py-2">Activity</p>
+                </div>
+                <div class="py-2 flex flex-col items-center">
+                    <img class="img-fluid h-4 w-auto" alt="menu-img" src="https://shorturl.at/P35CH" />
+                    <p class="text-xsm text-headerColor py-2">Later</p>
+                </div>
+                <div class="py-2 flex flex-col items-center">
+                    <img class="img-fluid h-4 w-auto" alt="menu-img" src="https://shorturl.at/vFN7z" />
+                    <p class="text-xsm text-headerColor py-2">Options</p>
+                </div>
+            </div>
+        </div>
+        <!-- second bar -->
+        <div
+            class="col-span-9 threads bg-darkPurple border-l border-r border-b border-palePurple border-t border-headerColor/30 text-headerColor text-xsm px-4">
+            <!-- Workspace Name -->
+            <div class="relative inline-block text-left text-headerColor">
+                <div class="relative w-fit">
+                    <button type="button"
+                        class="group flex items-center w-full justify-start py-2 text-white text-sm font-bold">
+                        My Workspace
+                        <!-- chevron (only visible on hover) -->
+                        <img class="h-4 w-4 " src="https://shorturl.at/qR1BM" alt="chev" />
+                    </button>
+                </div>
+            </div>
+            <!-- Threads -->
+            <div class="threads">
+                <ul class="list-none py-4 space-y-4">
+                    <li class="flex flex-row">
+                        <img class="img-fluid h-4 w-auto pr-2" alt="menu-img" src="https://shorturl.at/0owk5" />
+                        <span>Unread</span>
+                    </li>
+                    <li class="flex flex-row">
+                        <img class="img-fluid h-4 w-auto pr-2" alt="menu-img" src="https://shorturl.at/j4j63" />
+                        <span>Threads</span>
+                    </li>
+                    <li class="flex flex-row">
+                        <img class="img-fluid h-4 w-auto pr-2" alt="menu-img" src="https://shorturl.at/d7ofN" />
+                        <span>Huddles</span>
+                    </li>
+                    <li class="flex flex-row">
+                        <img class="img-fluid h-4 w-auto pr-2" alt="menu-img" src="https://shorturl.at/y2VNh" />
+                        <span>Drafts & Sent</span>
+                    </li>
+                </ul>
+            </div>
+            <!-- Channels -->
+            <div class="channels"></div>
+
+            <!-- Direct messages -->
+            <div id="messages"></div>
+        </div>
+    </div>
+</body>
+
+</html>

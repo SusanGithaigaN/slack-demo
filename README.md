@@ -25,7 +25,7 @@ You can view a live demo of this project here: [demo](https://sg-slack-demo.netl
 
 Follow these steps to get the project up and running locally:
 
-### 1. Clone the repository:
+### 1. Clone the repository
 
 ```sh
 

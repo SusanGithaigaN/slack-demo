@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>channels</title>
+</head>
+
+<body>
+    <div class="space-y-4 pt-6 text-headerColor h-auto">
+        <div class="relative inline-block text-left text-headerColor">
+            <div class="relative w-fit">
+                <button type="button" class="group flex items-center w-full justify-start gap-x-2 py-2 text-sm"
+                    id="dropdownButton">
+                    <!-- down arrow (always visible) -->
+                    <img class="h-1.5 w-auto" alt="down-arrow" src="https://shorturl.at/wDt0S" />
+                    Channels
+                    <!-- chevron (only visible on hover) -->
+                    <img class="h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                        src="https://shorturl.at/qR1BM" alt="chev" />
+                </button>
+            </div>
+            <!-- Dropdown content -->
+            <div id="dropdownMenu"
+                class="absolute hidden left-0 mt-2 w-48 bg-darkGray text-headerColor rounded-lg shadow-lg">
+                <ul class="space-y-4">
+                    <li class="flex flex-row cursor-pointer">
+                        <img class="img-fluid h-4 w-auto pr-2" alt="menu-img" src="https://shorturl.at/BJylR" />
+                        <span>Threads</span>
+                    </li>
+                    <li class="flex flex-row cursor-pointer">
+                        <img class="img-fluid h-4 w-auto pr-2" alt="menu-img" src="https://shorturl.at/BJylR" />
+                        <span>announcements</span>
+                    </li>
+                    <li class="flex flex-row cursor-pointer">
+                        <img class="img-fluid h-4 w-auto pr-2" alt="menu-img" src="https://shorturl.at/BJylR" />
+                        <span>random</span>
+                    </li>
+                    <li class="flex flex-row cursor-pointer">
+                        <img class="img-fluid h-4 w-auto pr-2" alt="menu-img" src="https://shorturl.at/BJylR" />
+                        <span>introductions</span>
+                    </li>
+                    <li class="flex flex-row cursor-pointer">
+                        <img class="img-fluid h-4 w-auto pr-2" alt="menu-img" src="https://shorturl.at/BJylR" />
+                        <span>resources</span>
+                    </li>
+                    <li class="flex flex-row cursor-pointer">
+                        <img class="img-fluid h-4 w-auto pr-2" alt="menu-img" src="https://shorturl.at/flzEf" />
+                        <span>client-feedback</span>
+                    </li>
+                    <li class="flex flex-row cursor-pointer">
+                        <img class="img-fluid h-4 w-auto pr-2" alt="menu-img" src="https://shorturl.at/flzEf" />
+                        <span>product-support</span>
+                    </li>
+                    <li class="flex flex-row cursor-pointer">
+                        <img class="img-fluid h-4 w-auto pr-2" alt="menu-img" src="https://shorturl.at/flzEf" />
+                        <span>investors</span>
+                    </li>
+                    <li class="flex flex-row cursor-pointer">
+                        <img class="img-fluid h-4 w-auto pr-2" alt="menu-img" src="https://shorturl.at/lVZJp" />
+                        <span>Add channels</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        const dropdownButton = document.getElementById('dropdownButton');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+        dropdownButton.addEventListener('click', () => {
+            dropdownMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
